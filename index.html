@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Half-Day Working Session Agenda · Baker Katz · August 11, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bk-dark:#1a1a2e; --bk-darker:#0f0f1e; --bk-blue:#9fc5e8; --bk-blue-bright:#d4eaff;
+    --bk-blue-dim:rgba(159,197,232,0.15); --bk-gold:#c9a227; --bk-gold-bright:#f0d35a;
+    --bk-green:#5ed44b; --bk-red:#b10202; --bk-text:#e0e0e0; --bk-muted:#8a8a9a;
+    --font-sans:'Inter',system-ui,-apple-system,sans-serif; --font-serif:'Instrument Serif',Georgia,serif;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; font-size:20px; }
+  body { font-family:var(--font-sans); background:var(--bk-darker); color:var(--bk-text); line-height:1.65; padding-bottom:4rem; }
+  header.top { padding:3.5rem 3rem 2.5rem; border-bottom:1px solid rgba(159,197,232,0.1); max-width:1100px; margin:0 auto; }
+  .label { font-size:.78rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--bk-blue); margin-bottom:.6rem; display:block; }
+  h1 { font-family:var(--font-serif); font-size:3.1rem; color:#fff; line-height:1.1; font-weight:400; margin-bottom:.8rem; }
+  h1 em { font-style:italic; color:var(--bk-blue); }
+  .lede { font-size:1.05rem; color:var(--bk-muted); margin-top:.6rem; max-width:900px; }
+  .meta-row { display:flex; gap:1.5rem; flex-wrap:wrap; margin-top:1.5rem; font-size:.92rem; color:var(--bk-muted); }
+  .meta-row .pill { padding:.4rem 1rem; border-radius:100px; background:var(--bk-blue-dim); color:var(--bk-blue); border:1px solid rgba(159,197,232,0.18); }
+  main { max-width:1100px; margin:0 auto; padding:2.5rem 3rem; }
+  section { margin-bottom:2.8rem; }
+  .section-header { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid rgba(159,197,232,0.12); padding-bottom:.8rem; margin-bottom:1.3rem; }
+  .section-header h2 { font-family:var(--font-serif); font-size:1.85rem; color:#fff; font-weight:400; }
+  .section-header h2 em { font-style:italic; color:var(--bk-blue); }
+  .section-header .time-budget { font-size:.85rem; font-weight:600; letter-spacing:.08em; color:var(--bk-gold-bright); text-transform:uppercase; }
+  p { max-width:920px; margin-bottom:1rem; font-size:1rem; }
+  strong { color:#fff; font-weight:600; }
+  .blue { color:var(--bk-blue); } .gold { color:var(--bk-gold-bright); }
+
+  /* AGENDA BLOCKS */
+  .block { margin-bottom:1.3rem; padding:1.3rem 1.6rem; background:rgba(159,197,232,0.04); border:1px solid rgba(159,197,232,0.1); border-left:3px solid var(--bk-blue); border-radius:8px; }
+  .block.gold-accent { border-left-color:var(--bk-gold); background:rgba(201,162,39,0.05); }
+  .block.green-accent { border-left-color:var(--bk-green); background:rgba(94,212,75,0.05); }
+  .block-head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:.5rem; gap:1rem; }
+  .block h3 { font-size:1.08rem; color:#fff; font-weight:600; }
+  .block .clock { font-size:.78rem; font-weight:700; color:var(--bk-gold-bright); letter-spacing:.06em; white-space:nowrap; }
+  .block .owner-tag { font-size:.72rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--bk-blue); margin-bottom:.5rem; display:inline-block; }
+  .block .frame { font-size:.95rem; color:var(--bk-text); margin-bottom:.6rem; opacity:.92; }
+  ul.ask-list { list-style:none; margin:.3rem 0 0; padding:0; }
+  ul.ask-list li { padding:.35rem 0 .35rem 1.2rem; font-size:.94rem; color:var(--bk-text); position:relative; line-height:1.5; }
+  ul.ask-list li::before { content:'\2192'; position:absolute; left:0; color:var(--bk-blue); font-weight:600; }
+  ul.ask-list li strong { color:#fff; }
+  .decide { display:block; margin-top:.7rem; padding:.6rem .9rem; border-radius:6px; background:rgba(94,212,75,0.07); border:1px solid rgba(94,212,75,0.22); font-size:.88rem; color:var(--bk-text); }
+  .decide strong { color:var(--bk-green); }
+
+  /* BREAK ROW */
+  .break-row { margin:1.3rem 0; padding:.8rem 1.6rem; border-radius:8px; background:rgba(15,15,30,0.5); border:1px dashed rgba(159,197,232,0.25); display:flex; justify-content:space-between; align-items:center; font-size:.92rem; color:var(--bk-muted); }
+  .break-row .clock { color:var(--bk-gold-bright); font-weight:700; font-size:.78rem; }
+
+  /* INFO STRIP */
+  .info-strip { margin-top:1rem; padding:1.3rem 1.6rem; border-radius:12px; background:rgba(159,197,232,0.05); border:1px solid rgba(159,197,232,0.1); font-size:.97rem; color:var(--bk-text); }
+  .info-strip strong { color:var(--bk-blue); }
+  .info-strip.gold { background:rgba(201,162,39,0.06); border-color:rgba(201,162,39,0.2); }
+  .info-strip.gold strong { color:var(--bk-gold-bright); }
+
+  footer { text-align:center; padding:3rem; font-size:.82rem; color:var(--bk-muted); border-top:1px solid rgba(159,197,232,0.06); max-width:1100px; margin:0 auto; }
+  @media(max-width:768px){ header.top{padding:2rem 1.5rem;} main{padding:1.5rem;} h1{font-size:2.2rem;} .block-head{flex-direction:column; gap:.2rem;} }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <span class="label">AUDIA Consulting · Working Session Agenda</span>
+  <h1>Baker Katz <em>Half-Day Working Session</em></h1>
+  <p class="lede">In-person at Baker Katz. The agenda is built around the priorities that surfaced on the July 29 leadership call and the two work streams now settling: the VP search and the email project. Per Jason's ask, we open by resetting priorities as of today before committing the day, so the order below is a strong draft to confirm together at the start.</p>
+  <div class="meta-row">
+    <span class="pill">Tuesday, August 11, 2026</span>
+    <span class="pill">10:00 AM to 2:30 PM Central</span>
+    <span class="pill">Baker Katz, Houston</span>
+    <span class="pill">Brian, Jason, Kenneth · Ben if available and applicable</span>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="section-header"><h2>The <em>Goal for the Day</em></h2></div>
+  <p>Both active work streams have settled enough to look up at the bigger picture. The ZRG search stays in play while the experience concern gets checked and one or two alternatives get shopped, and the email project has moved to a warm pause. That clears room for the two initiatives the principals want to weigh next: <span class="blue">systematizing how the firm develops and retains its people</span> (Jason's priority) and <span class="blue">a shared AI foundation before the firm commits to tools</span> (Brian's push), with <span class="blue">capital strategy and new-hire onboarding tied in</span>. By the end of the day we want a ranked set of next moves, an owner and a date on each, and the VP search pointed toward a decision.</p>
+</section>
+
+<section>
+  <div class="section-header"><h2>The <em>Agenda</em></h2><span class="time-budget">~4.5 hours, working lunch</span></div>
+
+  <div class="block">
+    <div class="block-head"><h3>01 · Reset priorities as of today and lock the order</h3><span class="clock">10:00 to 10:20</span></div>
+    <span class="owner-tag">All three</span>
+    <p class="frame">Step back and reset priorities as of today. Mark what has moved (email project handled for now, search underway) and surface what rises to the top now. Jason's specific ask was not to walk in assuming a topic, so we rank first, then run the day against it.</p>
+    <ul class="ask-list">
+      <li>"Where do our priorities stand today, and what rises to the top for the next stretch?"</li>
+      <li>"Kenneth and I did most of the talking in our last meeting together, so I want to make sure you have the opportunity to share what you think is important that we may have glazed over, Jason."</li>
+    </ul>
+    <span class="decide"><strong>Decide:</strong> the running order and rough time budget for the rest of the day.</span>
+  </div>
+
+  <div class="block gold-accent">
+    <div class="block-head"><h3>02 · Team development and retention</h3><span class="clock">10:20 to 11:20</span></div>
+    <span class="owner-tag">Jason's priority · Ben in the room if available and applicable</span>
+    <p class="frame">Systematize how the firm develops and holds its people. Talent is moving across the industry to firms and markets that promise more money and a change of scenery, and Jason wants to get ahead of it rather than react to a resignation. The aim is a repeatable development discipline, not a one-off round of raises.</p>
+    <ul class="ask-list">
+      <li>Accelerate profit-sharing for <strong>John Frazier</strong> and <strong>Lunden McGill</strong>, moving vesting up from roughly nine years toward six, on the back of the recent announcement and LinkedIn article.</li>
+      <li>Plan parallel retention and development conversations for <strong>Ben Brown, Nancy Haislup, Thomas Holdsworth, and Kennedi Vaughan.</strong></li>
+      <li>Frame the "systematize the development of our people" model as a leadership discipline that ties to the three-year theme of cultural flourishing and professional dignity.</li>
+      <li><strong>Priority thread: Jason's "Saturday conversation."</strong> A further-out, principals-only strand covering continued team growth, the addition of the "CEO type" senior hire, and the long-horizon succession picture, with the John Frazier and Lunden McGill relationship as the model. There is no ninety-day deadline; the goal is to start putting it on paper. Best handled just between Jason and Kenneth, with Brian in support, rather than the full group.</li>
+    </ul>
+    <div class="info-strip gold" style="margin-top:1rem;">
+      <strong>Flagged as prioritized.</strong> Jason named team development and retention as the higher-priority next initiative. The "Saturday conversation" (team growth, the CEO-type hire, succession) stays on the radar alongside it, even though it runs on a longer horizon.
+    </div>
+    <span class="decide"><strong>Decide:</strong> whether to move on John and Lunden vesting now, who owns each retention conversation, what the development framework's first version looks like, and when to set the principals-only "Saturday conversation" session.</span>
+  </div>
+
+  <div class="block gold-accent">
+    <div class="block-head"><h3>03 · Capital strategy</h3><span class="clock">11:20 to 12:00</span></div>
+    <span class="owner-tag">Carryover from July 29</span>
+    <p class="frame">Confirm the reset posture from June 8 and connect it to the hire. The binding constraint is finding deals, not raising money, so the new-raise target was reset to roughly $40M rather than chasing the full gap, with co-investing as a limited partner in other operators' deals added as a deliberate, lower-effort avenue. A core part of the VP role is cultivating capital relationships with the partner group, family offices, and high-net-worth individuals.</p>
+    <ul class="ask-list">
+      <li>Reaffirm the $40M new-equity target and the $6M/yr combined principal LP deployment ($3M each), scaling as capital recycles.</li>
+      <li>Fund V: $14.5M remaining, extended through December 31, 2027. Plan for deployment and the Fund II question.</li>
+      <li>Test the line-of-credit idea for closing quickly on off-market and quietly marketed deals, then refinancing.</li>
+    </ul>
+    <span class="decide"><strong>Decide:</strong> what capital posture the VP is hired to execute, so it can be stated plainly in the search and the onboarding.</span>
+  </div>
+
+  <div class="break-row">
+    <span><strong style="color:var(--bk-text);">Working lunch and reset.</strong> Catered in, keep it moving.</span>
+    <span class="clock">12:00 to 12:30</span>
+  </div>
+
+  <div class="block">
+    <div class="block-head"><h3>04 · VP, Investments and Acquisitions: search, comp, onboarding</h3><span class="clock">12:30 to 1:25</span></div>
+    <span class="owner-tag">Jason owns the search · Brian supports</span>
+    <p class="frame">The role is positioned as a counterpart to Ben Brown and the "CEO type" hire the principals have been building toward. ZRG sent their proposal and terms on July 23. Kenneth's concern is the senior-pitches, junior-delivers pattern; the facts partly answer it (Kevin Jones, 30+ years in real estate search; Adam, ~25 years principal-side PE real estate, newer to search), and it is worth raising with Kevin head-on rather than letting it sit.</p>
+    <ul class="ask-list">
+      <li>Report back: did the conversation with Kevin settle the experience and hand-off concern, and are roles clear?</li>
+      <li>Alternatives: Kenneth's friend's recruiter (retail-only depth is the difference) and Brian re-checking Rich's intended Dallas real estate firm (not the athletics contact).</li>
+      <li>Comp: ZRG's figure is a market straw man. Work a creative structure with more risk and more upside, potentially tied to Ben's arrangement.</li>
+      <li>Onboarding: set the integration process and how the role interlocks with Ben. <strong>Finish the buy box</strong>, the open item both Kenneth and the search firm independently named as what broke the last hire.</li>
+    </ul>
+    <span class="decide"><strong>Decide:</strong> whether to advance with ZRG or add one alternative call first, the comp framework to take to offer, and who finishes the buy box by when.</span>
+  </div>
+
+  <div class="block green-accent">
+    <div class="block-head"><h3>05 · AI Accelerator for Executives: scope and schedule</h3><span class="clock">1:25 to 2:05</span></div>
+    <span class="owner-tag">Brian's workshop</span>
+    <p class="frame">Brian's half-day executive workshop, to build a shared AI foundation before anyone commits to tools, so the firm does not paint itself into a corner. Applications span research and analytics, deal making, and operational controls. This is the counterweight to the tool-first instinct: choosing an AI tool early can create a lock-in you only see later.</p>
+    <ul class="ask-list">
+      <li>Scope: principals only, or the whole team.</li>
+      <li>Timing: run it on a dedicated block rather than squeezing it into this session, and set the date.</li>
+      <li>Sequence it against team development: parallel tracks, or foundation first.</li>
+    </ul>
+    <span class="decide"><strong>Decide:</strong> scope, audience, and a target date for the Accelerator.</span>
+  </div>
+
+  <div class="block">
+    <div class="block-head"><h3>06 · PlazAmericas / Boxer: execution check</h3><span class="clock">2:05 to 2:20</span></div>
+    <span class="owner-tag">Decision Zero · already landed on Path D</span>
+    <p class="frame">Direction is set: outsource operations to Boxer Properties while retaining ownership, leasing, and redevelopment control, targeted buttoned up before the holidays. The thread now is execution, not direction. Quick status so it does not stall behind the bigger topics, and so the principals' reclaimed bandwidth actually shows up.</p>
+    <ul class="ask-list">
+      <li>Where the Boxer clarifying-questions list and the reversibility safeguards stand.</li>
+      <li>HEB lease close and the two-year arc to a summer 2028 opening; flag any slippage.</li>
+      <li>Open items: division of leasing and whose tools to use.</li>
+    </ul>
+  </div>
+
+  <div class="block green-accent">
+    <div class="block-head"><h3>07 · Decisions, owners, and next steps</h3><span class="clock">2:20 to 2:30</span></div>
+    <span class="owner-tag">All three</span>
+    <p class="frame">Close the loop. Read back every decision made today, put a name and a date on each, and confirm the next meeting. Brian folds the outcomes into the Decisions and Direction synthesis and sends the recap.</p>
+    <span class="decide"><strong>Leave with:</strong> a ranked next-initiative list, owners and dates, and the VP search on a clear track.</span>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  AUDIA Consulting · Prepared by Brian Audia for Jason Baker and Kenneth Katz · Draft agenda for the August 11 in-person working session · Confidential: for Baker Katz leadership
+</footer>
+
+</body>
+</html>
